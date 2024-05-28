@@ -7,7 +7,7 @@ const pgconnect = new Client({
     host: process.env.HOST,
     database: process.env.DATABASE,
     password: process.env.PASSWORD,
-    port: parseInt(process.env.PORT),
+    port: parseInt(process.env.PG_PORT),
     ssl: {
       rejectUnauthorized: false
     }
