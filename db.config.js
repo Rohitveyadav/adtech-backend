@@ -3,10 +3,10 @@ const dotenv =  require('dotenv');
 dotenv.config();
 
 const pgconnect = new Client({
-    user: process.env.USER,
-    host: process.env.HOST,
-    database: process.env.DATABASE,
-    password: process.env.PASSWORD,
+    user: process.env.USERS || 'admin',
+    host: process.env.HOSTS || 'luckily-valid-blowfish-iad.a1.pgedge.io',
+    database: process.env.DATABASES || 'adtech_db',
+    password: process.env.PASSWORDS || '9GUhRUHV560Fa27q12xbu2l8',
     port: parseInt(process.env.PG_PORT),
     ssl: {
       rejectUnauthorized: false
