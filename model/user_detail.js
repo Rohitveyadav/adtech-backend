@@ -2,7 +2,7 @@ const pgclient = require('../db.config');
 
 const getUserCredentials = async function (useremail) {
     const selectQuery = `
-        SELECT user_email, user_password FROM register_user WHERE user_email = $1
+        SELECT user_email, user_password, user_status, verification_code FROM register_user WHERE user_email = $1
     `;
     const values = [useremail];
 
